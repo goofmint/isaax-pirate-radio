@@ -9,7 +9,7 @@ setInterval(() => {
   try {
     fs.statSync(filePath);
   } catch (e) {
-    console.log('File not found.')
+    console.log(`File not found. ${filePath}`);
     console.log(process.env);
     return;
   }
