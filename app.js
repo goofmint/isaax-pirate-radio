@@ -6,6 +6,6 @@ const filePath = '/sys/class/thermal/thermal_zone0/temp';
 setInterval(() => {
   fs.readFile(filePath, 'utf-8', (err, data) => {
     const temp = parseInt(parseInt(data) / 1000);
-    talk.talk(`現在の温度は${temp}度です`);
+    // talk.talk(`現在の温度は${temp}度です`);
   });
 }, 10000);
